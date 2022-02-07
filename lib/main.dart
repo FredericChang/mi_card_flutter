@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lint/lint.dart';
 
 
 void main() {
@@ -14,29 +13,79 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            //it could help to remove
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: Column(
             children: <Widget>[
+              const CircleAvatar(
+                radius: 60.0,
+                backgroundImage: AssetImage('images/r.jpg'),
+              ),
+              Text('Frederic',
+                style: TextStyle(
+                fontFamily: 'SupermercadoOne',
+                fontSize: 40.0,
+                color: Colors.red[100],
+                fontWeight:FontWeight.bold,
+              ),
+              ),
+              Text(
+                'Flutter Dev',
+                style: TextStyle(
+                  fontFamily: 'SupermercadoOne',
+                  fontSize: 20,
+                  letterSpacing: 2.5,
+                  color: Colors.red[200],
+                  fontWeight:FontWeight.bold,
+                ),
+              ),
               Container(
-                width: 100.0,
-                // margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
-                // padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(10.0),
                 color: Colors.white,
-                child: const Text("'Hello'"),
-              ),
-              const SizedBox(
-                width: 20.0,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      size: 50.0,
+                      color: Colors.pink[400],
+                      semanticLabel: 'Text to announce in accessibility modes',
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('+123 123 123 123',
+                    style: TextStyle(
+                      color: Colors.amber[500],
+                      fontFamily: 'SupermercadoOne',
+                      fontSize: 20.0,
+                    ),),
+                  ],
+                ),
               ),
               Container(
-                width: 100.0, color: Colors.blue,child: const Text("'Container2'"),),
-              const SizedBox(
-                width: 20.0,
-              ),
-              Container(
-                width: 100.0, color: Colors.red, child: const Text("'Container3'"),),
-
+                padding: EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.red[200],
+                      size: 50.0,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'xxxxxx@gmail.com',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily:'SupermercadoOne',
+                        color: Colors.teal.shade200,
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
