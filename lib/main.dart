@@ -38,10 +38,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: Padding(
-                  padding: EdgeInsets.all(25.0),
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.phone,
@@ -57,10 +54,8 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   )
-                ),
               ),
               Card(
-                color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
                 child: ListTile(
                   leading: Icon(
